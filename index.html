@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>表情包展示</title>
     <style>
         body{
@@ -9,14 +10,14 @@
             padding:40px;
             background:#0f172a;
             font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+            color:#e2e8f0;
         }
         .container{
             max-width:600px;
             margin:0 auto;
         }
-        /* 关键：把间距改大，下面用 100px 示范 */
         .image-item{
-            margin-bottom:100px;   /* 原来 40px → 100px */
+            margin-bottom:100px;
             text-align:center;
             background:rgba(255,255,255,.08);
             border-radius:16px;
@@ -43,22 +44,136 @@
             color:#cbd5e1;
             line-height:1.7;
         }
+        /* 视频区域样式 */
+        .video-box{
+            margin-top:25px;
+        }
+        .video-box video{
+            max-width:100%;
+            border-radius:8px;
+        }
+        .video-hint{
+            margin-top:10px;
+            font-size:16px;
+            color:#94a3b8;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 5 张图按顺序放，这里只写 1 张示意，其余同理 -->
+        <!-- 1️⃣ 第 1 张 -->
         <div class="image-item">
             <div class="image-number">1</div>
             <div class="image-container">
-                <img src="emotion_download_1759681644912.jpeg" alt="表情包1">
+                <img src="" alt="表情包1">
             </div>
             <div class="image-caption">
                 我的快乐就是看你生气还打不着我的样子，有本事你从手机里钻出来打我啊
             </div>
+            <!-- 照片下方视频 -->
+            <div class="video-box">
+                <video controls preload="metadata">
+                    <source src="" type="video/mp4">
+                    浏览器不支持 video 标签
+                </video>
+                <div class="video-hint">点击播放视频</div>
+            </div>
         </div>
 
-        <!-- 第 2~5 张同样包在 .image-item 里即可 -->
+        <!-- 2️⃣ 第 2 张 -->
+        <div class="image-item">
+            <div class="image-number">2</div>
+            <div class="image-container">
+                <img src="" alt="表情包2">
+            </div>
+            <div class="image-caption">你听好了～我只对你一个人说</div>
+            <!-- 照片下方视频 -->
+            <div class="video-box">
+                <video controls preload="metadata">
+                    <source src="" type="video/mp4">
+                    浏览器不支持 video 标签
+                </video>
+                <div class="video-hint">点击播放视频</div>
+            </div>
+        </div>
+
+        <!-- 3️⃣ 第 3 张 -->
+        <div class="image-item">
+            <div class="image-number">3</div>
+            <div class="image-container">
+                <img src="" alt="表情包3">
+            </div>
+            <div class="image-caption">你把耳朵凑过来，我悄悄地告诉你</div>
+            <!-- 照片下方视频 -->
+            <div class="video-box">
+                <video controls preload="metadata">
+                    <source src="" type="video/mp4">
+                    浏览器不支持 video 标签
+                </video>
+                <div class="video-hint">点击播放视频</div>
+            </div>
+        </div>
+
+        <!-- 4️⃣ 第 4 张 -->
+        <div class="image-item">
+            <div class="image-number">4</div>
+            <div class="image-container">
+                <img src="" alt="表情包4">
+            </div>
+            <div class="image-caption">你想知道是什么话吗？</div>
+            <!-- 照片下方视频 -->
+            <div class="video-box">
+                <video controls preload="metadata">
+                    <source src="" type="video/mp4">
+                    浏览器不支持 video 标签
+                </video>
+                <div class="video-hint">点击播放视频</div>
+            </div>
+        </div>
+
+        <!-- 5️⃣ 第 5 张 -->
+        <div class="image-item">
+            <div class="image-number">5</div>
+            <div class="image-container">
+                <img src="" alt="表情包5">
+            </div>
+            <div class="image-caption">在嘛在嘛，其实有句话在我心里隐藏很久了</div>
+            <!-- 照片下方视频 -->
+            <div class="video-box">
+                <video controls preload="metadata">
+                    <source src="" type="video/mp4">
+                    浏览器不支持 video 标签
+                </video>
+                <div class="video-hint">点击播放视频</div>
+            </div>
+        </div>
     </div>
+
+    <!-- 背景音乐：自动+循环，初始静音 -->
+    <audio id="bgm" autoplay loop muted style="display:none;">
+        <source src="https://raw.githubusercontent.com/kkaaccnnbb/music/refs/heads/main/%E7%A7%8B%E6%88%90%20-%20%E7%A7%8B%E6%88%90-%E5%BD%93%E7%BE%9E%E6%B6%A9%E4%B8%8D%E5%86%8D%E7%A6%81%E9%94%A2%20%E6%B8%85%E6%B5%81%E4%B9%9F%E6%98%AF%E4%B8%80%E7%A7%8D%E7%BD%AA%EF%BC%88%E7%A7%8B%E6%88%90%20remix%EF%BC%89.mp3" type="audio/mpeg">
+        你的浏览器不支持 audio 标签。
+    </audio>
+
+    <!-- 静音/有声切换按钮 -->
+    <button id="muteBtn" style="position:fixed;top:15px;right:15px;z-index:999;
+                                 border:none;background:rgba(255,255,255,.25);
+                                 color:#fff;border-radius:50%;width:40px;height:40px;
+                                 font-size:18px;cursor:pointer;">🔇</button>
+
+    <script>
+        const bgm = document.getElementById('bgm');
+        const btn = document.getElementById('muteBtn');
+        // 用户第一次交互后允许有声
+        document.body.addEventListener('click',()=>{
+            bgm.muted = false;
+            btn.textContent = '🔊';
+        },{once:true});
+        // 按钮随时切换
+        btn.onclick = () => {
+            bgm.muted = !bgm.muted;
+            btn.textContent = bgm.muted ? '🔇' : '🔊';
+        };
+    </script>
 </body>
 </html>
