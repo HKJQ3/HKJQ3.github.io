@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表情包展示</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #e2e8f0;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+        }
+        
+        .image-item {
+            margin-bottom: 40px;
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .image-item:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-number {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .image-container {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 15px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            transition: transform 0.4s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.03);
+        }
+        
+        .image-caption {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #cbd5e1;
+            line-height: 1.7;
+            padding: 0 15px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>表情包展示</h1>
+        
+        <div class="image-item">
+            <div class="image-number">1</div>
+            <div class="image-container">
+                <img src="emotion_download_1759681644912.jpeg" alt="表情包1">
+            </div>
+            <div class="image-caption">我的快乐就是看你生气还打不着我的样子，有本事你从手机里钻出来打我啊</div>
+        </div>
+        
+        <div class="image-item">
+            <div class="image-number">2</div>
+            <div class="image-container">
+                <img src="emotion_download_1759681642749.jpeg" alt="表情包2">
+            </div>
+            <div class="image-caption">你听好了～我只对你一个人说</div>
+        </div>
+        
+        <div class="image-item">
+            <div class="image-number">3</div>
+            <div class="image-container">
+                <img src="emotion_download_1759681641389.jpeg" alt="表情包3">
+            </div>
+            <div class="image-caption">你把耳朵凑过来，我悄悄地告诉你</div>
+        </div>
+        
+        <div class="image-item">
+            <div class="image-number">4</div>
+            <div class="image-container">
+                <img src="emotion_download_1759681637598.jpeg" alt="表情包4">
+            </div>
+            <div class="image-caption">你想知道是什么话吗？</div>
+        </div>
+        
+        <div class="image-item">
+            <div class="image-number">5</div>
+            <div class="image-container">
+                <img src="emotion_download_1759681621946.jpeg" alt="表情包5">
+            </div>
+            <div class="image-caption">在嘛在嘛，其实有句话在我心里隐藏很久了</div>
+        </div>
+    </div>
+</body>
+</html>
